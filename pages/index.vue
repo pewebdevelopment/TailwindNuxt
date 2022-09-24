@@ -1,17 +1,3 @@
 <template>
-  <div>
-    <br />
-    <div>
-      <h1 class="text-2xl mt-3 mb-3 text-center bg-gray-800 text-white">
-        This is my Nuxt App
-      </h1>
-    </div>
-    <br />
-  </div>
+  <div>This is my Nuxt App</div>
 </template>
-
-<script setup>
-</script>
-
-<style>
-</style>

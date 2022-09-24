@@ -1,4 +1,15 @@
 <script setup>
+import { reactive } from "vue";
+import { useRouter } from "vue-router";
+import { mdiAccount, mdiAsterisk } from "@mdi/js";
+import SectionFullScreen from "@/components/SectionFullScreen.vue";
+import CardBox from "@/components/CardBox.vue";
+import FormCheckRadio from "@/components/FormCheckRadio.vue";
+import FormField from "@/components/FormField.vue";
+import FormControl from "@/components/FormControl.vue";
+import BaseButton from "@/components/BaseButton.vue";
+import BaseButtons from "@/components/BaseButtons.vue";
+import LayoutGuest from "@/layouts/LayoutGuest.vue";
 const form = reactive({
   login: "john.doe",
   pass: "highly-secure-password-fYjUw-",
@@ -11,10 +22,9 @@ const submit = () => {
 </script>
 
 <template>
-  <div>
-    This is Login Page
-    <LayoutGuest>
-      <CardBox is-form @submit.prevent="submit">
+  <NuxtLayout>
+    <SectionFullScreen v-slot="{ cardClass }" bg="purplePink">
+      <CardBox :class="cardClass" is-form @submit.prevent="submit">
         <FormField label="Login" help="Please enter your login">
           <FormControl
             v-model="form.login"
@@ -48,6 +58,6 @@ const submit = () => {
           </BaseButtons>
         </template>
       </CardBox>
-    </LayoutGuest>
-  </div>
+    </SectionFullScreen>
+  </NuxtLayout>
 </template>
