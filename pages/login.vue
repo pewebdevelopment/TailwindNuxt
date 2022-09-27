@@ -4,10 +4,10 @@ const form = reactive({
   pass: "highly-secure-password-fYjUw-",
   remember: true,
 });
-const router = useRouter();
-const submit = () => {
-  router.push("/dashboard");
-};
+// const router = useRouter();
+// const submit = () => {
+//   router.push("/dashboard");
+// };
 </script>
 
 <template>
