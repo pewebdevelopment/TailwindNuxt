@@ -26,6 +26,6 @@ const transactionBarItems = computed(() => mainStore.history);
 
 <template>
   <div>
-    <NuxtLayout name="Authenticated.vue"> This is the dashboard </NuxtLayout>
+    <NuxtLayout name=""> This is the dashboard </NuxtLayout>
   </div>
 </template>
