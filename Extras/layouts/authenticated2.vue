@@ -20,13 +20,13 @@ useMainStore().setUser({
 });
 const layoutAsidePadding = "xl:pl-60";
 const styleStore = useStyleStore();
-const router = useRouter();
+//const router = useRouter();
 const isAsideMobileExpanded = ref(false);
 const isAsideLgActive = ref(false);
-router.beforeEach(() => {
-  isAsideMobileExpanded.value = false;
-  isAsideLgActive.value = false;
-});
+// router.beforeEach(() => {
+//   isAsideMobileExpanded.value = false;
+//   isAsideLgActive.value = false;
+// });
 const menuClick = (event, item) => {
   if (item.isToggleLightDark) {
     styleStore.setDarkMode();
