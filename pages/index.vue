@@ -17,10 +17,20 @@ const form = reactive({
 <template>
   <NuxtLayout>
 
-    <Zen></Zen>
+   
 
     <SectionFullScreen v-slot="{ cardClass }" bg="purplePink">
       <CardBox :class="cardClass" is-form @submit.prevent="submit">
+
+
+        <FormField label="Login" help="Please enter your login">
+            <FormControl
+              v-model="form.login"
+              :icon="mdiAccount"
+              name="login"
+              autocomplete="username"
+            />
+          </FormField>
 
         <FormField label="Password" help="Please enter your password">
             <FormControl
