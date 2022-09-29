@@ -22,6 +22,22 @@ const form = reactive({
     <SectionFullScreen v-slot="{ cardClass }" bg="purplePink">
       <CardBox :class="cardClass" is-form @submit.prevent="submit">
 
+        <FormField label="Password" help="Please enter your password">
+            <FormControl
+              v-model="form.pass"
+              :icon="mdiAsterisk"
+              type="password"
+              name="password"
+              autocomplete="current-password"
+            />
+          </FormField>
+
+        <FormCheckRadio
+            v-model="form.remember"
+            name="remember"
+            label="Remember"
+            :input-value="true"
+          />
 
 
         <template #footer>

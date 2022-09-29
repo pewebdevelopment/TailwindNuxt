@@ -45,7 +45,7 @@ const inputType = computed(() =>
       v-model="computedValue"
       :type="inputType"
       :name="name"
-      :value="inputValue"
+      :input-value="inputValue"
     />
     <span class="check" />
     <span class="pl-2">{{ label }}</span>
