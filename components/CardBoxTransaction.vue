@@ -34,7 +34,7 @@ const props = defineProps({
   },
   account: {
     type: String,
-    required: true,
+    required: false,
   },
 });
 

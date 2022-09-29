@@ -28,7 +28,7 @@ const transactionBarItems = computed(() => mainStore.history);
 
 <template>
   <div>
-    <NuxtLayout name=""> This is the dashboard </NuxtLayout>
+    <NuxtLayout name=""> This is the dashboard 
 
     <SectionMain>
 
@@ -88,7 +88,7 @@ const transactionBarItems = computed(() => mainStore.history);
               :business="transaction.business"
               :type="transaction.type"
               :name="transaction.name"
-              :account="transaction.account"
+             
             />
           </div>
           <div class="flex flex-col justify-between">
@@ -127,10 +127,11 @@ const transactionBarItems = computed(() => mainStore.history);
         <NotificationBar color="info" :icon="mdiMonitorCellphone">
           <b>Responsive table.</b> Collapses on mobile
         </NotificationBar>
-        
-        
 
-    </SectionMain>
-
+        <CardBox has-table>
+          <!-- <TableSampleClients /> -->
+        </CardBox>
+      </SectionMain>
+    </NuxtLayout>
   </div>
 </template>

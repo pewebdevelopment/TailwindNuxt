@@ -73,7 +73,7 @@ const checked = (isChecked, client) => {
 </script>
 
 <template>
-  <CardBoxModal v-model="isModalActive" title="Sample modal">
+  <!-- <CardBoxModal v-model="isModalActive" title="Sample modal">
     <p>Lorem ipsum dolor sit amet <b>adipiscing elit</b></p>
     <p>This is sample modal</p>
   </CardBoxModal>
@@ -86,7 +86,7 @@ const checked = (isChecked, client) => {
   >
     <p>Lorem ipsum dolor sit amet <b>adipiscing elit</b></p>
     <p>This is sample modal</p>
-  </CardBoxModal>
+  </CardBoxModal> -->
 
   <div v-if="checkedRows.length" class="p-3 bg-gray-100/50 dark:bg-slate-800">
     <span

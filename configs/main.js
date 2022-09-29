@@ -5,7 +5,7 @@ import App from "./App.vue";
 import router from "./router";
 import { useMainStore } from "@/stores/main.js";
 import { useStyleStore } from "@/stores/style.js";
-import { darkModeKey, styleKey } from "@/config.js";
+import { darkModeKey, styleKey } from "@/configs/config.js";
 
 import "./css/main.css";
 
