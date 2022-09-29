@@ -20,7 +20,7 @@ const form = reactive({
    
 
     <SectionFullScreen v-slot="{ cardClass }" bg="purplePink">
-      <CardBox :class="cardClass" is-form @submit.prevent="submit">
+      <CardBox :class="cardClass" is-form @submit.prevent="">
 
 
         <FormField label="Login" help="Please enter your login">
