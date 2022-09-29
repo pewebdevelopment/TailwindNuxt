@@ -5,7 +5,7 @@ import { darkModeKey, styleKey } from "@/configs/config";
 
 useHead({
   titleTemplate: (titleChunk) => {
-    const titleBase = "Admin One Vue 3 Tailwind";
+    const titleBase = "Zen11";
 
     return titleChunk ? `${titleChunk} - ${titleBase}` : titleBase;
   },
