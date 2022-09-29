@@ -129,7 +129,7 @@ const transactionBarItems = computed(() => mainStore.history);
         </NotificationBar>
 
         <CardBox has-table>
-          <!-- <TableSampleClients /> -->
+          <TableSampleClients />
         </CardBox>
       </SectionMain>
     </NuxtLayout>
