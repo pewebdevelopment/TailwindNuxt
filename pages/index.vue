@@ -16,6 +16,14 @@ const form = reactive({
 
 <template>
   <NuxtLayout>
-    <h1>This is a simple H1 Tag</h1>
+
+    <Zen></Zen>
+
+    <SectionFullScreen v-slot="{ cardClass }" bg="purplePink">
+
+    </SectionFullScreen>
+
+
+
   </NuxtLayout>
 </template>
