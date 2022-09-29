@@ -11,8 +11,10 @@ import {
   mdiChartPie,
 } from "@mdi/js";
 import * as chartConfig from "@/components/Charts/chart.config.js";
+import LineChart from "@/components/Charts/LineChart.vue";
 
 const chartData = ref(null);
+
 const fillChartData = () => {
   chartData.value = chartConfig.sampleChartData();
 };
@@ -27,5 +29,27 @@ const transactionBarItems = computed(() => mainStore.history);
 <template>
   <div>
     <NuxtLayout name=""> This is the dashboard </NuxtLayout>
+
+    <SectionMain>
+
+      <SectionTitleLineWithButton
+          :icon="mdiChartTimelineVariant"
+          title="Overview"
+          main
+        >
+          <BaseButton
+            href="https://github.com/justboil/admin-one-vue-tailwind"
+            target="_blank"
+            :icon="mdiGithub"
+            label="Star on GitHub"
+            color="contrast"
+            rounded-full
+            small
+          />
+
+        </SectionTitleLineWithButton>
+        
+    </SectionMain>
+
   </div>
 </template>
