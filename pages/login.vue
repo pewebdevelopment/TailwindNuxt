@@ -4,12 +4,16 @@ const form = reactive({
   pass: "highly-secure-password-fYjUw-",
   remember: true,
 });
-// const router = useRouter();
-// const submit = () => {
-//   router.push("/dashboard");
-// };
+const router = useRouter();
+const submit = () => {
+router.push("/dashboard");
+};
 </script>
 
+
 <template>
-  <div>This is Login Page</div>
+  <NuxtLayout name="">
+    <div>This is Login Page</div>
+  </NuxtLayout>
+  
 </template>

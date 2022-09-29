@@ -28,7 +28,7 @@ const transactionBarItems = computed(() => mainStore.history);
 
 <template>
   <div>
-    <NuxtLayout name=""> This is the dashboard 
+    <NuxtLayout name="">
 
     <SectionMain>
 
