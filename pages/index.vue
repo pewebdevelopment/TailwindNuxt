@@ -8,10 +8,10 @@ const form = reactive({
   pass: "highly-secure-password-fYjUw-",
   remember: true,
 });
-// const router = useRouter();
-// const submit = () => {
-//   router.push("/dashboard");
-// };
+const router = useRouter();
+const submit = () => {
+router.push("/dashboard");
+};
 </script>
 
 <template>
@@ -20,7 +20,7 @@ const form = reactive({
    
 
     <SectionFullScreen v-slot="{ cardClass }" bg="purplePink">
-      <CardBox :class="cardClass" is-form @submit.prevent="">
+      <CardBox :class="cardClass" is-form @submit.prevent="submit">
 
 
         <FormField label="Login" help="Please enter your login">
