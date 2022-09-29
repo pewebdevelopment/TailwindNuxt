@@ -20,6 +20,17 @@ const form = reactive({
     <Zen></Zen>
 
     <SectionFullScreen v-slot="{ cardClass }" bg="purplePink">
+      <CardBox :class="cardClass" is-form @submit.prevent="submit">
+
+
+
+        <template #footer>
+            <BaseButtons>
+              <BaseButton type="submit" color="info" label="Login" />
+              <BaseButton to="/dashboard" color="info" outline label="Back" />
+            </BaseButtons>
+          </template>
+      </CardBox>
 
     </SectionFullScreen>
 
