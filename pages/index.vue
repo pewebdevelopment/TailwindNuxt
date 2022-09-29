@@ -1,5 +1,6 @@
 <script setup>
 import { reactive } from "vue";
+import { mdiAccount, mdiAsterisk } from "@mdi/js";
 import { useRouter } from "vue-router";
 
 const form = reactive({
