@@ -4,7 +4,7 @@
 export default defineNuxtConfig({
   srcDir: "./",
   css: [
-    '@/assets/css/tailwind.css',
+    '@/assets/css/main.css',
   ],
 
   buildModules: [
