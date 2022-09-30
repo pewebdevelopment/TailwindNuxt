@@ -17,6 +17,7 @@ const styleStore = useStyleStore();
 
 // /* App style */
 // styleStore.setStyle(localStorage[styleKey] ?? "basic");
+styleStore.setDarkMode(true);
 
 /* Dark mode */
 // if (
@@ -43,7 +44,7 @@ const currentStyle =
     ? localStorage[styleKey]
     : "basic";
 
-//styleStore.setStyle(currentStyle);
+styleStore.setStyle(currentStyle);
 
 const currentStoredDarkMode =
   typeof localStorage !== "undefined" && localStorage[darkModeKey] === "1";
@@ -54,7 +55,7 @@ if (
     window.matchMedia("(prefers-color-scheme: dark)").matches) ||
   currentStoredDarkMode
 ) {
-  //styleStore.setDarkMode(true);
+  styleStore.setDarkMode(true);
 }
 </script>
 
