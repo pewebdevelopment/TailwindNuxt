@@ -30,7 +30,7 @@ import { useMainStore } from "@/stores/main.js";
 
 useHead({
   titleTemplate: (titleChunk) => {
-    const titleBase = "Zen111";
+    const titleBase = "Zen Nuxt ";
 
     return titleChunk ? `${titleChunk} - ${titleBase}` : titleBase;
   },
