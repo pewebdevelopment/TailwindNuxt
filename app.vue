@@ -8,8 +8,8 @@ import { useMainStore } from "@/stores/main.js";
 //import "@assets/css/main.css";
 
 
-// const mainStore = useMainStore();
-// const styleStore = useStyleStore();
+const mainStore = useMainStore();
+const styleStore = useStyleStore();
 
 // /* Fetch sample data */
 // mainStore.fetch("clients");
