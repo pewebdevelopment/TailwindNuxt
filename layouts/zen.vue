@@ -94,6 +94,16 @@ const menuClick = (event, item) => {
 
 
             <slot />
+
+            <FooterBar>
+        Get more with
+        <a
+          href="#"
+          target="_blank"
+          class="text-blue-600"
+          >Photon Ecademy</a
+        >
+      </FooterBar>
         </div>
 
 
