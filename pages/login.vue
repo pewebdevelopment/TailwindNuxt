@@ -12,8 +12,9 @@ router.push("/dashboard");
 
 
 <template>
-  <NuxtLayout name="">
+  <div>
+  <NuxtLayout name="zen">
     <div>This is Login Page</div>
   </NuxtLayout>
-  
+</div>
 </template>
