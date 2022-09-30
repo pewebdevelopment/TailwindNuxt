@@ -46,7 +46,7 @@ const menuClick = (event, item) => {
           dark: styleStore.darkMode,
           'overflow-hidden lg:overflow-visible': isAsideMobileExpanded,
         }">
-            Zen Custum Layout | Some *custom* layout
+        
 
             <div :class="[layoutAsidePadding, { 'ml-60 lg:ml-0': isAsideMobileExpanded }]" class="
         pt-14
