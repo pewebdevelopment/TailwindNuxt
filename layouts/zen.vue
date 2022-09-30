@@ -82,6 +82,14 @@ const menuClick = (event, item) => {
           />
         </NavBarItemPlain>
 
+        <AsideMenu
+        :is-aside-mobile-expanded="isAsideMobileExpanded"
+        :is-aside-lg-active="isAsideLgActive"
+        :menu="menuAside"
+        @menu-click="menuClick"
+        @aside-lg-close-click="isAsideLgActive = false"
+      />
+
             </div>
 
 
