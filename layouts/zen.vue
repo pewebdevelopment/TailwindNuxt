@@ -73,13 +73,17 @@ const menuClick = (event, item) => {
             <FormControl placeholder="Search (ctrl+k)" ctrl-k-focus transparent borderless />
           </NavBarItemPlain>
         </NavBar>
+
+
+        <slot />
+
         <AsideMenu :is-aside-mobile-expanded="isAsideMobileExpanded" :is-aside-lg-active="isAsideLgActive"
           :menu="menuAside" @menu-click="menuClick" @aside-lg-close-click="isAsideLgActive = false" />
 
       </div>
 
 
-      <slot />
+     
 
       <FooterBar>
           
