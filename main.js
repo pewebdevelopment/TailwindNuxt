@@ -7,13 +7,13 @@ import { useMainStore } from "@/stores/main.js";
 import { useStyleStore } from "@/stores/style.js";
 import { darkModeKey, styleKey } from "@/configs/config.js";
 
-import "./css/main.css";
+import "@assets/css/main.css";
 
 /* Init Pinia */
 const pinia = createPinia();
 
 /* Create Vue app */
-createApp(App).use(router).use(pinia).mount("#app");
+// createApp(App).use(router).use(pinia).mount("#app");
 
 /* Init Pinia stores */
 const mainStore = useMainStore(pinia);
@@ -35,12 +35,3 @@ if (
   styleStore.setDarkMode(true);
 }
 
-/* Default title tag */
-const defaultDocumentTitle = "Admin One Vue 3 Tailwind";
-
-/* Set document title from route meta */
-router.afterEach((to) => {
-  document.title = to.meta?.title
-    ? `${to.meta.title} — ${defaultDocumentTitle}`
-    : defaultDocumentTitle;
-});

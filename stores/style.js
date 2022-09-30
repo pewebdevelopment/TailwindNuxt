@@ -2,8 +2,8 @@ import { defineStore } from "pinia";
 import * as styles from "@/configs/styles";
 import { darkModeKey, styleKey } from "@/configs/config";
 
-export const useStyleStore = defineStore("style", {
-  state: () => ({
+
+  const state = () => ({
     /* Styles */
     asideStyle: "",
     asideScrollbarsStyle: "",
@@ -18,8 +18,11 @@ export const useStyleStore = defineStore("style", {
 
     /* Dark mode */
     darkMode: false,
-  }),
-  actions: {
+  });
+
+
+
+  const actions = {
     setStyle(payload) {
       if (!styles[payload]) {
         return;
@@ -53,5 +56,11 @@ export const useStyleStore = defineStore("style", {
         );
       }
     },
-  },
+  };
+
+
+
+export const useStyleStore = defineStore('style', {
+  state,
+  actions
 });
