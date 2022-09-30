@@ -37,24 +37,24 @@ useHead({
 
 
 
-const currentStyle =
-  typeof localStorage !== "undefined" && localStorage[styleKey]
-    ? localStorage[styleKey]
-    : "basic";
+// const currentStyle =
+//   typeof localStorage !== "undefined" && localStorage[styleKey]
+//     ? localStorage[styleKey]
+//     : "basic";
 
-styleStore.setStyle(currentStyle);
+// styleStore.setStyle(currentStyle);
 
-const currentStoredDarkMode =
-  typeof localStorage !== "undefined" && localStorage[darkModeKey] === "1";
+// const currentStoredDarkMode =
+//   typeof localStorage !== "undefined" && localStorage[darkModeKey] === "1";
 
-if (
-  (!currentStoredDarkMode &&
-    typeof window !== "undefined" &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches) ||
-  currentStoredDarkMode
-) {
-  styleStore.setDarkMode(true);
-}
+// if (
+//   (!currentStoredDarkMode &&
+//     typeof window !== "undefined" &&
+//     window.matchMedia("(prefers-color-scheme: dark)").matches) ||
+//   currentStoredDarkMode
+// ) {
+//   styleStore.setDarkMode(true);
+// }
 </script>
 
 <template>
