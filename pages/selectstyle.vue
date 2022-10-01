@@ -14,7 +14,9 @@
     
     const router = useRouter();
     const click = (slug) => {
-      styleStore.setStyle(slug);
+       
+      //styleStore.setStyle(slug);
+      styleStore.setStyle("white");
       router.push("/dashboard");
     };
 
