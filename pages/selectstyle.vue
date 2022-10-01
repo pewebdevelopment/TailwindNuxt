@@ -9,12 +9,12 @@
     
     const styleStore = useStyleStore();
     
-    styleStore.setDarkMode(true);
+    styleStore.setDarkMode(false);
     
     
     const router = useRouter();
     const click = (slug) => {
-      styleStore.setStyle("white");
+      styleStore.setStyle(slug);
       router.push("/dashboard");
     };
 
