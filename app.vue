@@ -14,14 +14,19 @@ const styleStore = useStyleStore();
 // styleStore.setStyle(localStorage[styleKey] ?? "basic");
 // styleStore.setDarkMode(true);
 
+onMounted(() => {
+  
+  if (
+  (!localStorage[darkModeKey] &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches) ||
+  localStorage[darkModeKey] === "1"
+) {
+  styleStore.setDarkMode();
+}
+
+}),
 /* Dark mode */
-// if (
-//   (!localStorage[darkModeKey] &&
-//     window.matchMedia("(prefers-color-scheme: dark)").matches) ||
-//   localStorage[darkModeKey] === "1"
-// ) {
-//   styleStore.setDarkMode(true);
-// }
+
 
 
 useHead({

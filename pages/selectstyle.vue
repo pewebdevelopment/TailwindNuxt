@@ -9,16 +9,35 @@
     
     const styleStore = useStyleStore();
     
-    styleStore.setDarkMode(false);
+    styleStore.setDarkMode();
     
     
     const router = useRouter();
-    const click = (slug) => {
+    
+
+    onMounted(() => {
+
+if (process.client)
+/* App style */
+styleStore.setStyle(localStorage[styleKey] ?? "basic");
+/* Dark mode */
+  if (
+    (!localStorage[darkModeKey] &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches) ||
+    localStorage[darkModeKey] === '1'
+  ) {
+    styleStore.setDarkMode(true)
+  }
+
+}) 
+
+const click = (slug) => {
        
-      //styleStore.setStyle(slug);
-      styleStore.setStyle("white");
-      router.push("/dashboard");
-    };
+       //styleStore.setStyle(slug);
+       styleStore.setStyle(slug);
+       router.push("/dashboard");
+     };
+
 
     /* App style */
 // styleStore.setStyle(localStorage[styleKey] ?? "basic");
